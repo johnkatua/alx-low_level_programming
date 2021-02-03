@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
-* main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19"
-*
-* Return: 1
-*/
+ * main - This function prints out the following string to standard error
+ * and that piece of art is useful" - Dora Korpar, 2015-10-19
+ * Return: This function returns 1
+ */
 int main(void)
 {
 	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, ");
