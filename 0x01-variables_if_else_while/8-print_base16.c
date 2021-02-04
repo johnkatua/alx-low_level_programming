@@ -8,7 +8,7 @@
 int main(void)
 {
 	int num;
-	char hexadecimal[] = '123456789abcdef';
+	char hexadecimal[] = "123456789abcdef";
 
 	for (num = 0; num < 16; num++)
 	{
