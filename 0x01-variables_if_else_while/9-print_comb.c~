@@ -1,0 +1,27 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ * Prints all possible combinations of single-digit numbers.
+ *
+ * Return when successful
+ */
+int main(void)
+{
+	int numb;
+
+	for (numb = '0'; numb <= '9'; numb++)
+	{
+		putchar(num);
+		if (num == '9')
+		{
+			break;
+		}
+		else
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
+}
