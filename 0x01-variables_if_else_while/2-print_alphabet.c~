@@ -1,0 +1,11 @@
+#include <stdio.h>
+/**
+ * main - Prints alphabets in lowercase
+ * It takes no arguments
+ *
+ * Return: 0 if it complied successfully
+ */
+int main(void)
+{
+
+}
