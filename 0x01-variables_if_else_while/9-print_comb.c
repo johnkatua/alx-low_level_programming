@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int numb;
+	int num;
 
-	for (numb = '0'; numb <= '9'; numb++)
+	for (num = '0'; num <= '9'; num++)
 	{
 		putchar(num);
 		if (num == '9')
