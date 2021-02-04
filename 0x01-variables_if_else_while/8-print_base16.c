@@ -8,11 +8,11 @@
 int main(void)
 {
 	int num;
-	char hexadecimal[] = "123456789abcdef";
+	char hexval[] = "0123456789abcdef";
 
 	for (num = 0; num < 16; num++)
 	{
-		putchar(hexadecimal[num]);
+		putchar(hexval[num]);
 	}
 	putchar('\n');
 	return (0);
