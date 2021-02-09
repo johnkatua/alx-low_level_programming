@@ -1,2 +1,2 @@
-#Debbuging
+# Debbuging
 Debugging C programs
