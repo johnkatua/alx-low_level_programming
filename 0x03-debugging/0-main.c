@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - test function that prints if number is or negative
+ * main - test function that prints if number is positive or negative
  *
  * Return: 0
  */
