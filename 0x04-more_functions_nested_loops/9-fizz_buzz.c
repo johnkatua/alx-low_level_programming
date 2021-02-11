@@ -11,7 +11,7 @@ int main(void)
 
 	for (num = 0; num <= 100; num++)
 	{
-		if (num  == 0)
+		if (num  == 100)
 		{
 			printf("Buzz");
 			break;
