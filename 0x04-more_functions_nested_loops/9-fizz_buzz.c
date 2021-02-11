@@ -1,39 +1,40 @@
 #include <stdio.h>
 /**
- * main - It takes no arguments
- * prints the numbers from 1 to 100
+ *main-prints 1-100, multiples 0f 3 prints -fizz, of prints 5-buzz
  *
- * Return: returns void
+ *Return:void.
  */
+
 int main(void)
 {
-	int num;
 
-	for (num = 0; num <= 100; num++)
+	int k;
+
+	for (k = 1; k <= 100; k++)
 	{
-		if (num  == 100)
+		if (k == 100)
 		{
 			printf("Buzz");
 			break;
 		}
-		else if (num % 3 == 0 && num % 5 != 0)
+		else if (k % 3 == 0 && k % 5 != 0)
 		{
 			printf("Fizz");
 			printf(" ");
 		}
-		else if (num % 5 == 0 && num % 3 != 0)
+		else if (k % 5 == 0 && k % 3 != 0)
 		{
 			printf("Buzz");
 			printf(" ");
 		}
-		else if (num % 3 == 0 && num % 5 == 0)
+		else if (k % 3 == 0 && k % 5 == 0)
 		{
 			printf("FizzBuzz");
 			printf(" ");
 		}
 		else
 		{
-			printf("%d", num);
+			printf("%d", k);
 			printf(" ");
 		}
 	}
