@@ -1,14 +1,15 @@
 #include "holberton.h"
 /**
- * print_square - It takes one argument
- * @size: Dimension of the square
- * It prints out the square
+ *print_square-prints a square of defined size.
+ *@size:size of the square.
  *
- * Return: returns void
+ *Return:void
  */
+
+
 void print_square(int size)
 {
-	int a, b;
+	int j, k;
 
 	if (size <= 0)
 	{
@@ -16,11 +17,11 @@ void print_square(int size)
 	}
 	else
 	{
-		for (a = 0; a < size; a++)
+		for (j = 0; j < size; j++)
 		{
-			for (b = 0; b < size; b++)
+			for (k = 0; k < size; k++)
 			{
-				_putchar('\n');
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
