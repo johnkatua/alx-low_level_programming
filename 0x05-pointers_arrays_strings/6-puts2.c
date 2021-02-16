@@ -1,28 +1,22 @@
 #include "holberton.h"
 /**
- * puts2 - prints multiples of two.
- * @str: first parameter
+ *puts2 - prints very other character in string.
+ *@str: pointer to string.
  *
- * Return: void
+ *Return: void.
  */
 void puts2(char *str)
 {
-	int i, len, start;
+	int i;
 
-	len = 0;
-
-	for (i = 0; str[i] != '\0'; ++i)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		len = i;
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
+		i++;
 	}
-
-	for (start = 0; start <= len; start++)
-	{
-		if (start % 2 == 0)
-			_putchar(str[start]);
-		else
-			continue;
-	}
-
 	_putchar('\n');
 }
