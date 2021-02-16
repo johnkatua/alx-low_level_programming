@@ -1,18 +1,19 @@
-#include  "holberton.h"
+#include "holberton.h"
+
 /**
- * puts2 - It has only one parameter
- * It prints character of a string
- * @str: String whose characters are displayed
- * Return: returns void
+ * puts2 - prints every other character of a  string to stdout
+ * @str: string to print
+ *
+ * Return: void
  */
 void puts2(char *str)
 {
-	int idx  = 0;
+	int i = 0;
 
-	while (*(str + idx))
+	while (*(str + i))
 	{
-		_putchar(*(str + idx));
-		idx += 2;
+		_putchar(*(str + i));
+		i = i + 2;
 	}
 	_putchar('\n');
 }
