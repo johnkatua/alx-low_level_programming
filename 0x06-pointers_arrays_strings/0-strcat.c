@@ -1,23 +1,23 @@
 #include "holberton.h"
 /**
- * _strcat - It takes 2 arguments
- * It concetenates 2 strings
- * @dest: Where the string is copied to
- * @src: source string
- * Return: returns dest
+ *_strcat-concatenates a string.
+ *@dest:destination string.
+ *@src:source string.
+ *
+ *Return:Pointer to the cancated string.
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int a, b;
-
-	for (a = 0; dest[a] != '\0'; a++)
+	int i, m;
+	/*Get the size of the destination string.*/
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+	for (m = 0; src[m] != '\0'; m++)
 	{
-		for (b = 0; src[b] != '\0'; b++)
-		{
-			dest[a] = src[b];
-			a++;
-		}
+		dest[i] = src[m];
+		i++;
 	}
-	dest[a] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
