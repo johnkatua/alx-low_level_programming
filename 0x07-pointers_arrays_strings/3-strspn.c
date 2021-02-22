@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strspn - It takes 2 arguments
  * It gets the length of a prefix substring
