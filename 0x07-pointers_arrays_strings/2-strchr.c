@@ -1,24 +1,26 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
- * _strchr - It takes two arguments
- * It locates a character in a string
- * @s: the string to find character
- * @c: character in a string
- * Return: returns pointer to first occurence of a sring
+ *_strchr - locates a character in a string.
+ *@s: pointer to string.
+ *@c: character to be found.
+ *
+ *Return: pointer to first occurence of the character.
+ *or null if character is not found.
  */
 char *_strchr(char *s, char c)
 {
-	char *ptr;
-	int i;
+	char *p; /* pointer to first occurence*/
+	int counter;
 
-	ptr = NULL;
-	for (i = 0; s[i] != '\0'; i++)
+	p = NULL;
+	for (counter = 0; s[counter] != '\0'; counter++)
 	{
-		if (s[i] == c)
+		if (s[counter] == c)
 		{
-			ptr = &s[i];
+			p = &s[counter];
 			break;
 		}
 	}
-	return (ptr);
+	return (p);
 }
