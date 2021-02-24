@@ -2,17 +2,17 @@
 /**
  * sqrt - It takes two arguments
  * It checks the square root of a number
- * @a: input number
+ * @n: input number
  * @b: counter
  * Return: returns square root of a number
  */
-int sqrt(int a, int b)
+int sqrt(int n, int b)
 {
-	if (b * b > a)
+	if (b * b > n)
 		return (-1);
-	if (b * b == a)
+	if (b * b == n)
 		return (b);
-	return (sqrt(a, b + 1));
+	return (sqrt(n, b + 1));
 }
 
 
