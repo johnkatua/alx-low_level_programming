@@ -1,30 +1,29 @@
 #include "holberton.h"
+
 /**
- * sqrt - It takes two arguments
- * It checks the square root of a number
+ * isSqrt - computes the square of a number
  * @n: input number
- * @b: counter
- * Return: returns square root of a number
+ * @c: counter
+ * Return: square root of number
  */
-int sqrt(int n, int b)
+
+int isSqrt(int n, int c)
 {
-	if (b * b > n)
+	if (c * c > n)
 		return (-1);
-	if (b * b == n)
-		return (b);
-	return (sqrt(n, b + 1));
+	if (c * c == n)
+		return (c);
+	return (isSqrt(n, c + 1));
 }
 
-
 /**
- * _sqrt_recursion - It takes one argument
- * It returns the natural square root of a number
- * @n: integer to find square root
- * Return: returns square root of a number
+ * _sqrt_recursion -computes natural square root of a number
+ * @n: input number
+ * Return: square root of a numer
  */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (sqrt(n, 1));
+	return (isSqrt(n, 1));
 }
