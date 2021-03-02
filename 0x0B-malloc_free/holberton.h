@@ -1,13 +1,13 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
+int _putchar(char);
 char *create_array(unsigned int size, char c);
-void _memset(char *s, char b, unsigned int n);
 char *_strdup(char *str);
-int _strlen(char *s);
 char *str_concat(char *s1, char *s2);
-char *_strcat(char *dest, char *src);
-int _strlen(char *s);
 int **alloc_grid(int width, int height);
-char *argstostr(int ac, char **av);
 void free_grid(int **grid, int height);
-#endif
+char *argstostr(int ac, char **av);
+char **strtow(char *str);
+
+#endif /* _HOLBERTON_H_ */
