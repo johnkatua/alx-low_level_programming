@@ -1,26 +1,27 @@
-#include "function_holberton.h"
+#include "function_pointers.h"
 
 /**
- * int_index - It searches for an integer
- * @array: array with the elements
- * @size: size of the array
- * @cmp: pointer function to compare the elements
- * Return: returns index of the found index
+ * int_index - searches for an integer
+ * @array: array to serch through
+ * @size: size of array
+ * @cmp: function used to compare
+ *
+ * Return: first index for which cmp doesn't return 0, or -1
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int a, b;
+	int i, r;
 
 	if (size > 0 && array && cmp)
 	{
-		for (a = 0; a < size; a++)
+		for (i = 0; i < size; i++)
 		{
-			b = cmp(array[a]);
-			if (b)
+			r = cmp(array[i]);
+			if (r)
 				break;
 		}
-		if (a < size)
-			return (a);
+		if (i < size)
+			return (i);
 	}
 	return (-1);
 }
