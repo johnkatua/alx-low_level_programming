@@ -1,20 +1,17 @@
 #include "holberton.h"
-
 /**
- * git_bit - returns the value of a bit at a given index
- * @n: the number to check bits in
- * @index: index at which  to check bit
- * Return: returns value of bit or -1 incase of errors
+ *get_bit - returns the value of a bit at a given index
+ *@n: number
+ *@index: index
+ *
+ *Return: n bit at position index
+ *-1 if an error occured
  */
-
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 32 * 8 || !n)
-	{
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
-	}
-	else
-	{
-		return ((n >> index) & 1);
-	}
+	n = (n >> index & 1) ? 1 : 0;
+
+	return (n);
 }
