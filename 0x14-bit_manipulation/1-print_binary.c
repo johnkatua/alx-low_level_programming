@@ -1,48 +1,17 @@
 #include "holberton.h"
-
 /**
- * _pow - calculates (base ^ power)
- * @base: base of the exponent
- * @power: power of the exponent
+ *print_binary - prints the binary representation of a number
+ *@n: number
  *
- * Return: value of (base ^ power)
- */
-unsigned long int _pow(unsigned int base, unsigned int power)
-{
-	unsigned long int num;
-	unsigned int i;
-
-	num = 1;
-	for (i = 1; i <= power; i++)
-		num *= base;
-	return (num);
-}
-
-/**
- * print_binary - prints a number in binary notation
- * @n: number to print
- *
- * Return: void
+ *Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int divisor, check;
-	char flag;
+	unsigned long int _aux = n;
+	int j = 0;
 
-	flag = 0;
-	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (divisor != 0)
-	{
-		check = n & divisor;
-		if (check == divisor)
-		{
-			flag = 1;
-			putchar('1');
-		}
-		else if (flag == 1 || divisor == 1)
-		{
-			putchar('0');
-		}
-		divisor >>= 1;
-	}
+	while ((_aux >>= 1) > 0)
+		j++;
+	while (j >= 0)
+		_putchar((n >> j-- & 1) ? '1' : '0');
 }
