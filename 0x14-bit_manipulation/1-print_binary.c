@@ -1,48 +1,48 @@
 #include "holberton.h"
 
 /**
- * pow - It calculates base to power
- * @base: base of a number
- * @power: power of a number
- * Return: returns base to power
+ * _pow - calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
+ *
+ * Return: value of (base ^ power)
  */
-
-unsigned long int pow(unsigned int base, unsigned int power)
+unsigned long int _pow(unsigned int base, unsigned int power)
 {
-	unsigned long int number = 1;
-	unsigned int val;
+	unsigned long int num;
+	unsigned int i;
 
-	for (val = 1; val <= power; val++)
-	{
-		number *= base;
-	}
-	return (number);
+	num = 1;
+	for (i = 1; i <= power; i++)
+		num *= base;
+	return (num);
 }
 
 /**
- * print_binary - prints a binary to represent a number
- * @n: number to be printed
- * Return: returns void
+ * print_binary - prints a number in binary notation
+ * @n: number to print
+ *
+ * Return: void
  */
-
 void print_binary(unsigned long int n)
 {
-	unsigned long int a, b;
-	char j = 0;
+	unsigned long int divisor, check;
+	char flag;
 
-	a = pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (a != 0)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		b = n & a;
-		if (b == a)
+		check = n & divisor;
+		if (check == divisor)
 		{
-			j = 1;
-			_putchar('1');
+			flag = 1;
+			putchar('1');
 		}
-		else if (j == 1 || a == 1)
+		else if (flag == 1 || divisor == 1)
 		{
-			_putchar('0');
+			putchar('0');
 		}
-		a >>= 1;
+		divisor >>= 1;
 	}
 }
