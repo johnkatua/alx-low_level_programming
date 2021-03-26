@@ -28,7 +28,7 @@ unsigned long int pow(unsigned int base, unsigned int power)
 void print_binary(unsigned long int n)
 {
 	unsigned long int a, b;
-	char j;
+	char j = 0;
 
 	a = pow(2, sizeof(unsigned long int) * 8 - 1);
 	while (a != 0)
