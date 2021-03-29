@@ -1,30 +1,13 @@
 #include "holberton.h"
-
 /**
- * _strlength - Finds the length of a string
- * @str: pointer to the string to find the length
- * Return: returns the length of a string
+ * create_file -creates a file
+ * @filename: name of file to create.
+ * @text_content: NULL terminated string to write to the file
+ * Return: 1 on success, -1 on failure
  */
-int _strlength(char *str)
+int create_file(const char *filename, char *text_content)
 {
-	int i = 0;
-
-	while (*(str + i) != 0)
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * create_file - It creates a new file
- * @filename: the name of the file to create
- * @text_context: NULL terminated string to write to the file
- * Return: returns 1 on success and -1 on failure
- */
-int create_file(const char *filename, char *text_context)
-{
-	int fd, fd_wr;
+	int fd, fd_write;
 
 	if (filename == NULL)
 	{
@@ -35,15 +18,35 @@ int create_file(const char *filename, char *text_context)
 	{
 		return (-1);
 	}
-	if (text_context == NULL)
+	if (text_content == NULL)
 	{
-		return (-1);
+		return (1);
 	}
-	fd_wr = write(fd, text_context, _strlength(text_context));
+	fd_write = write(fd, text_content, _strlen(text_content));
 	close(fd);
-	if (fd_wr == -1)
+	if (fd_write == -1)
 	{
 		return (-1);
 	}
+
 	return (1);
+}
+
+
+/**
+ *_strlen-Finds the length of a string.
+ *@s:String pointer to the string whose length is to be found.
+ *
+ *Return: returns the length of the string.
+ */
+
+int _strlen(char *s)
+{
+	int p = 0;
+	/*incremeant up to when the last character is NULL,\0*/
+	while (*(s + p) != 0)
+	{
+		p++;
+	}
+	return (p);
 }
